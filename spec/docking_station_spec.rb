@@ -7,9 +7,9 @@ describe DockingStation do
 
   it { is_expected.to respond_to (:release_bike)}
 
-
-
-
-
+  it "Releases a new bike upon .release_bike" do
+    bike = subject.release_bike
+    expect(bike.working?).to eq true
+  end
 
 end
